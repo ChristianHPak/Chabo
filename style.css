@@ -1,0 +1,24 @@
+body {
+    background-image: url("images/clucker.jpg");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: 100vh vmax;
+    z-index: -1;
+    max-width: 100%;;
+}
+
+.welcome {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+}
+
+.steam_image {
+    height:100px;
+    width: 100px;
+}
+
+.steam_group {
+    
+}
