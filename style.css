@@ -32,8 +32,8 @@ body {
     -moz-transition: color .3s;
     transition: color .3s;
     line-height: 20px;
-    color: #f6416c;
-    background: #ffde7d;
+    color: black;
+    background: transparent;
     border: none;
     height: 45px;
     padding: 0 5px;
@@ -43,8 +43,8 @@ body {
 }
 
 .steam_group:hover {
-    color: #ffde7d;
-    background: #f6416c;
+    color: black;
+    background: transparent;
 }
 
 .button_text {
@@ -56,6 +56,7 @@ body {
     position: relative;
     display: inline-block;
     padding: 0 22px;
+    color: black;
     -webkit-animation: wt-btn_sign-marquee 2s linear infinite;
     -moz-animation: wt-btn_sign-marquee 2s linear infinite;
     -o-animation: wt-btn_sign-marquee 2s linear infinite;
