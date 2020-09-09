@@ -1,1 +1,0 @@
-// http://steamcommunity.com/gid/<GroupID>/memberslistxml/?xml=1
