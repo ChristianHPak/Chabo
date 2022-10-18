@@ -24,7 +24,6 @@ spans.forEach((span, idx) => {
     }, 750 * (idx + 1))
 });
 
-
 // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
 var apiKey = "DE0CA2613230BD6C712C1C561A7D5DB2";
 var steamId = "76561198125213172"
@@ -34,7 +33,7 @@ var queryURL = "http://steamcommunity.com/gid/29094493/memberslistxml/?xml=1"
 
 console.log(queryURL)
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $.getJSON( "ajax/test.json", function( data ) {
         var items = [];
         $.each( data, function( key, val ) {
