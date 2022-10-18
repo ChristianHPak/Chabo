@@ -34,18 +34,46 @@ var queryURL = "http://steamcommunity.com/gid/29094493/memberslistxml/?xml=1"
 
 console.log(queryURL)
 
-$(document).ready(function(){
+$(document).ready(function() {
+    $.getJSON( "ajax/test.json", function( data ) {
+        var items = [];
+        $.each( data, function( key, val ) {
+          items.push( "<li id='" + key + "'>" + val + "</li>" );
+        });
+       
+        $( "<ul/>", {
+          "class": "my-new-list",
+          html: items.join( "" )
+        }).appendTo( "body" );
+      });  
+});
+
+/* $(document).ready(function () {
     $.ajax({
         url: queryURL,
         type: "GET",
         dataType: "xml",
         success: xmlParser,
+
     })
 });
 
-function xmlParser(xml) {
-    $(xml).find("members").each(function() {
-        $("#membersShowHere").append('<div class="members">' + $(this).find("steamID64").text() + "  " + '</div>')
-        console.log($(this).find("steamID64").text())
+// Turn on Allow CORS Google Extension
+ function xmlParser(xml) {
+    $(xml).find("members").each(function () {
+        $("#membersShowHere").push('<div class="members">' + $(this).find("steamID64").text() + " " + '</div>')
+        var Profile = (($(this).find("steamID64").text()));
+        var userId = [];
+        let text = " "
+        for (var i = 0, charsLength = Profile.length; i < charsLength; i += 17) {
+            userId.push(Profile.substring(i, i + 17));
+        }
+        userId.forEach(myFunction);
+        document.getElementById("eachId").innerHTML = text;
+
+        function myFunction(item) {
+            text += item + "<br>";
+        }
+
     });
-}
+} */
